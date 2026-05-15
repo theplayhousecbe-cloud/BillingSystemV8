@@ -1,0 +1,288 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: tests\app.spec.js >> test
+- Location: tests\app.spec.js:3:1
+
+# Error details
+
+```
+Test timeout of 30000ms exceeded.
+```
+
+```
+Error: locator.click: Test timeout of 30000ms exceeded.
+Call log:
+  - waiting for getByRole('button', { name: 'Add Table Now' })
+
+```
+
+# Page snapshot
+
+```yaml
+- generic [ref=e1]:
+  - generic [ref=e2]:
+    - banner [ref=e3]:
+      - generic [ref=e4]:
+        - link "PlayHouse Cafe Billing System" [ref=e5] [cursor=pointer]:
+          - /url: /
+          - img [ref=e7]
+          - generic [ref=e10]:
+            - generic [ref=e11]: PlayHouse Cafe
+            - generic [ref=e12]: Billing System
+        - generic [ref=e13]:
+          - generic [ref=e15]: Praveenbalaji
+          - button "Toggle theme" [ref=e16]:
+            - img [ref=e17]
+          - button "Logout" [ref=e19]:
+            - img [ref=e20]
+            - generic [ref=e23]: Logout
+    - main [ref=e24]:
+      - button "Back to dashboard" [ref=e25]:
+        - img [ref=e26]
+        - text: Back to dashboard
+      - generic [ref=e28]:
+        - generic [ref=e29]:
+          - generic [ref=e30]: Customer
+          - generic [ref=e31]: SANJI
+          - generic [ref=e32]: "8610588775"
+          - generic [ref=e33]:
+            - generic [ref=e34]: Table A
+            - button "+" [ref=e35]
+        - generic [ref=e36]:
+          - generic [ref=e37]: Time Remaining
+          - generic [ref=e38]: 00:59:32
+          - generic [ref=e39]: "Started: 7:50:55 PM · Now: 7:51:23 PM"
+          - generic [ref=e40]:
+            - text: "Elapsed: 00:00:27 · Planned:"
+            - generic [ref=e41]: 60m
+          - generic [ref=e42]:
+            - button "Edit timer" [ref=e43]:
+              - img [ref=e44]
+              - text: Edit timer
+            - button "+1 hour" [ref=e47]:
+              - img [ref=e48]
+              - text: +1 hour
+        - generic [ref=e49]:
+          - generic [ref=e50]: Live Bill
+          - generic [ref=e51]: ₹190.00
+          - generic [ref=e52]: First hr ₹149 · Then ₹99/hr per head
+          - generic [ref=e53]: 4 active · 5 total
+      - generic [ref=e54]:
+        - generic [ref=e55]:
+          - generic [ref=e56]:
+            - img [ref=e57]
+            - heading "Persons in Session" [level=2] [ref=e62]
+            - generic [ref=e63]:
+              - button "Add Adult (₹149)" [active] [ref=e64]:
+                - img [ref=e65]
+                - text: Add Adult (₹149)
+              - button "Add Kid (₹99)" [ref=e68]:
+                - img [ref=e69]
+                - text: Add Kid (₹99)
+          - table [ref=e73]:
+            - rowgroup [ref=e74]:
+              - row "Person Type Joined Left Time Charge" [ref=e75]:
+                - columnheader "Person" [ref=e76]
+                - columnheader "Type" [ref=e77]
+                - columnheader "Joined" [ref=e78]
+                - columnheader "Left" [ref=e79]
+                - columnheader "Time" [ref=e80]
+                - columnheader "Charge" [ref=e81]
+                - columnheader [ref=e82]
+            - rowgroup [ref=e83]:
+              - row "Person A adult · ₹149/hr 07:50 PM 07:50 PM 00:00:00 ₹0.00" [ref=e84]:
+                - cell "Person A" [ref=e85]
+                - cell "adult · ₹149/hr" [ref=e86]:
+                  - generic [ref=e87]: adult · ₹149/hr
+                - cell "07:50 PM" [ref=e88]
+                - cell "07:50 PM" [ref=e89]
+                - cell "00:00:00" [ref=e90]
+                - cell "₹0.00" [ref=e91]
+                - cell [ref=e92]
+              - row "Person B adult · ₹149/hr 07:50 PM active 00:00:00 ₹0.00 Left" [ref=e93]:
+                - cell "Person B" [ref=e94]
+                - cell "adult · ₹149/hr" [ref=e95]:
+                  - generic [ref=e96]: adult · ₹149/hr
+                - cell "07:50 PM" [ref=e97]
+                - cell "active" [ref=e98]
+                - cell "00:00:00" [ref=e99]
+                - cell "₹0.00" [ref=e100]
+                - cell "Left" [ref=e101]:
+                  - button "Left" [ref=e102]:
+                    - img [ref=e103]
+                    - text: Left
+              - row "Person C adult · ₹149/hr 07:50 PM active 00:00:00 ₹0.00 Left" [ref=e106]:
+                - cell "Person C" [ref=e107]
+                - cell "adult · ₹149/hr" [ref=e108]:
+                  - generic [ref=e109]: adult · ₹149/hr
+                - cell "07:50 PM" [ref=e110]
+                - cell "active" [ref=e111]
+                - cell "00:00:00" [ref=e112]
+                - cell "₹0.00" [ref=e113]
+                - cell "Left" [ref=e114]:
+                  - button "Left" [ref=e115]:
+                    - img [ref=e116]
+                    - text: Left
+              - row "Person D kid · ₹99/hr 07:50 PM active 00:00:00 ₹0.00 Left" [ref=e119]:
+                - cell "Person D" [ref=e120]
+                - cell "kid · ₹99/hr" [ref=e121]:
+                  - generic [ref=e122]: kid · ₹99/hr
+                - cell "07:50 PM" [ref=e123]
+                - cell "active" [ref=e124]
+                - cell "00:00:00" [ref=e125]
+                - cell "₹0.00" [ref=e126]
+                - cell "Left" [ref=e127]:
+                  - button "Left" [ref=e128]:
+                    - img [ref=e129]
+                    - text: Left
+              - row "Person E adult · ₹149/hr 07:50 PM active 00:00:00 ₹0.00 Left" [ref=e132]:
+                - cell "Person E" [ref=e133]
+                - cell "adult · ₹149/hr" [ref=e134]:
+                  - generic [ref=e135]: adult · ₹149/hr
+                - cell "07:50 PM" [ref=e136]
+                - cell "active" [ref=e137]
+                - cell "00:00:00" [ref=e138]
+                - cell "₹0.00" [ref=e139]
+                - cell "Left" [ref=e140]:
+                  - button "Left" [ref=e141]:
+                    - img [ref=e142]
+                    - text: Left
+          - paragraph [ref=e145]: Each person is billed for THEIR own time — first 60 min @ their rate, then ₹99/hr — pro-rated to the minute.
+        - generic [ref=e146]:
+          - generic [ref=e147]:
+            - img [ref=e148]
+            - heading "Live Charges" [level=2] [ref=e151]
+          - generic [ref=e152]:
+            - generic [ref=e153]:
+              - generic [ref=e154]: Tea
+              - generic [ref=e155]: ₹30.00
+            - generic [ref=e156]:
+              - generic [ref=e157]: Coffee
+              - generic [ref=e158]: ₹50.00
+            - generic [ref=e159]:
+              - generic [ref=e160]: Sandwich
+              - generic [ref=e161]: ₹110.00
+            - generic [ref=e163]:
+              - generic [ref=e164]: Total
+              - generic [ref=e165]: ₹190.00
+        - generic [ref=e166]:
+          - generic [ref=e167]:
+            - img [ref=e168]
+            - heading "Cafe Menu" [level=2] [ref=e173]
+            - generic [ref=e174]:
+              - generic [ref=e175]: 3 items · ₹190.00
+              - button "Send to Kitchen" [ref=e176]
+          - generic [ref=e177]:
+            - generic [ref=e179]:
+              - generic [ref=e180]:
+                - generic [ref=e181]: Tea
+                - generic [ref=e182]: ₹30
+              - generic [ref=e183]:
+                - button "−" [ref=e184]
+                - generic [ref=e185]: "1"
+                - button "+" [ref=e186]
+            - generic [ref=e188]:
+              - generic [ref=e189]:
+                - generic [ref=e190]: Coffee
+                - generic [ref=e191]: ₹50
+              - generic [ref=e192]:
+                - button "−" [ref=e193]
+                - generic [ref=e194]: "1"
+                - button "+" [ref=e195]
+            - generic [ref=e197]:
+              - generic [ref=e198]:
+                - generic [ref=e199]: Cold Coffee
+                - generic [ref=e200]: ₹90
+              - generic [ref=e201]:
+                - button "−" [ref=e202]
+                - generic [ref=e203]: "0"
+                - button "+" [ref=e204]
+            - generic [ref=e206]:
+              - generic [ref=e207]:
+                - generic [ref=e208]: Maggi
+                - generic [ref=e209]: ₹80
+              - generic [ref=e210]:
+                - button "−" [ref=e211]
+                - generic [ref=e212]: "0"
+                - button "+" [ref=e213]
+            - generic [ref=e215]:
+              - generic [ref=e216]:
+                - generic [ref=e217]: Sandwich
+                - generic [ref=e218]: ₹110
+              - generic [ref=e219]:
+                - button "−" [ref=e220]
+                - generic [ref=e221]: "1"
+                - button "+" [ref=e222]
+            - generic [ref=e224]:
+              - generic [ref=e225]:
+                - generic [ref=e226]: Burger
+                - generic [ref=e227]: ₹130
+              - generic [ref=e228]:
+                - button "−" [ref=e229]
+                - generic [ref=e230]: "0"
+                - button "+" [ref=e231]
+            - generic [ref=e233]:
+              - generic [ref=e234]:
+                - generic [ref=e235]: French Fries
+                - generic [ref=e236]: ₹100
+              - generic [ref=e237]:
+                - button "−" [ref=e238]
+                - generic [ref=e239]: "0"
+                - button "+" [ref=e240]
+            - generic [ref=e242]:
+              - generic [ref=e243]:
+                - generic [ref=e244]: Pizza
+                - generic [ref=e245]: ₹220
+              - generic [ref=e246]:
+                - button "−" [ref=e247]
+                - generic [ref=e248]: "0"
+                - button "+" [ref=e249]
+            - generic [ref=e251]:
+              - generic [ref=e252]:
+                - generic [ref=e253]: Pasta
+                - generic [ref=e254]: ₹180
+              - generic [ref=e255]:
+                - button "−" [ref=e256]
+                - generic [ref=e257]: "0"
+                - button "+" [ref=e258]
+            - generic [ref=e260]:
+              - generic [ref=e261]:
+                - generic [ref=e262]: Milkshake
+                - generic [ref=e263]: ₹120
+              - generic [ref=e264]:
+                - button "−" [ref=e265]
+                - generic [ref=e266]: "0"
+                - button "+" [ref=e267]
+            - generic [ref=e269]:
+              - generic [ref=e270]:
+                - generic [ref=e271]: Mojito
+                - generic [ref=e272]: ₹110
+              - generic [ref=e273]:
+                - button "−" [ref=e274]
+                - generic [ref=e275]: "0"
+                - button "+" [ref=e276]
+            - generic [ref=e278]:
+              - generic [ref=e279]:
+                - generic [ref=e280]: Water Bottle
+                - generic [ref=e281]: ₹20
+              - generic [ref=e282]:
+                - button "−" [ref=e283]
+                - generic [ref=e284]: "0"
+                - button "+" [ref=e285]
+        - generic [ref=e286]:
+          - generic [ref=e287]:
+            - generic [ref=e288]:
+              - img [ref=e289]
+              - heading "Session Controls" [level=2] [ref=e292]
+            - button "End Session & Generate Bill" [ref=e293]:
+              - img [ref=e294]
+              - text: End Session & Generate Bill
+          - paragraph [ref=e297]: Ending the session closes any still-active persons at the current time and generates the final bill.
+  - region "Notifications alt+T"
+```

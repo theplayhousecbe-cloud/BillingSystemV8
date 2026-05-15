@@ -1,0 +1,11 @@
+node_modules
+dist
+.env
+.env.local
+.env.*.local
+.vscode/*
+!.vscode/settings.json
+!.vscode/css-custom-data.json
+.DS_Store
+*.log
+.tanstack
