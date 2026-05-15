@@ -91,13 +91,13 @@
   "main": "eslint.config.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Zoro99743/host-status-view.git"
+    "url": "git+https://github.com/theplayhousecbe-cloud/BillingSystemV8/host-status-view.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Zoro99743/host-status-view/issues"
+    "url": "https://github.com/theplayhousecbe-cloud/BillingSystemV8/host-status-view/issues"
   },
-  "homepage": "https://github.com/Zoro99743/host-status-view#readme"
+  "homepage": "https://github.com/theplayhousecbe-cloud/BillingSystemV8/host-status-view#readme"
 }
